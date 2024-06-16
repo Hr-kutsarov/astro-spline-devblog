@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   darkMode: ["class"],
   content: 
@@ -17,6 +20,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["Raleway", ...defaultTheme.fontFamily.serif]
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

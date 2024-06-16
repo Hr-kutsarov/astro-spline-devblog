@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import "@fontsource-variable/raleway";
 ---
 
 <!doctype html>
@@ -15,12 +17,29 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
 	</head>
-	<body>
+	<body class="flex flex-col">
 		<slot />
 	</body>
 </html>
 <style is:global>
+
+	@font-face {
+		font-family: 'Raleway-Light';
+		src: url('/src/fonts/Raleway/Raleway-Light.ttf') format('trueType');
+	}
+
+	@font-face {
+		font-family: 'Oswald-Regular';
+		src: url('/src/fonts/Oswald/static/Oswald-Regular.ttf') format('trueType');
+	}
+
+	@font-face {
+		font-family: 'Raleway-Bold';
+		src: url('/src/fonts/Raleway/Raleway-Bold.ttf') format('trueType');
+	}
+
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -49,4 +68,16 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+
+	h1, p, li, button, a, span, ul {
+		font-family: 'Oswald-Bold', sans-serif;
+	}
+
+	h2 {
+		font-family: 'Raleway-Light', sans-serif;
+	}
+
+	/* li {
+		font-family: 'Raleway-Bold', sans-serif;
+	} */
 </style>
