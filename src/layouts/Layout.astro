@@ -25,19 +25,22 @@ import "@fontsource-variable/raleway";
 </html>
 <style is:global>
 
+	/* PT SANS 25px for subtitles */
 	@font-face {
-		font-family: 'Raleway-Light';
-		src: url('/src/fonts/Raleway/Raleway-Light.ttf') format('trueType');
+		font-family: 'PT-Sans';
+		src: url('/src/fonts/PT_Sans/PTSans-Regular.ttf') format('trueType');
 	}
 
+	/* TEKO for headings */
 	@font-face {
-		font-family: 'Oswald-Regular';
-		src: url('/src/fonts/Oswald/static/Oswald-Regular.ttf') format('trueType');
+		font-family: 'Teko';
+		src: url('/src/fonts/Teko/static/Teko-Regular.ttf') format('trueType');
 	}
 
+	/* ibm plex sans for  */
 	@font-face {
-		font-family: 'Raleway-Bold';
-		src: url('/src/fonts/Raleway/Raleway-Bold.ttf') format('trueType');
+		font-family: 'Plex';
+		src: url('/src/fonts/IBM_Plex_Sans_Condensed/IBMPlexSansCondensed-Regular.ttf') format('trueType');
 	}
 
 	:root {
@@ -53,8 +56,9 @@ import "@fontsource-variable/raleway";
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		/* background: #13151a;
+		background-size: 224px; */
+		scroll-behavior: smooth;
 	}
 	code {
 		font-family:
@@ -69,15 +73,16 @@ import "@fontsource-variable/raleway";
 			monospace;
 	}
 
-	h1, p, li, button, a, span, ul {
-		font-family: 'Oswald-Bold', sans-serif;
+	h1, {
+		font-family: 'Teko', sans-serif;
 	}
 
-	h2 {
-		font-family: 'Raleway-Light', sans-serif;
+	h2, h3, h4, h5 {
+		font-family: 'PT-Sans', sans-serif;
 	}
 
-	/* li {
-		font-family: 'Raleway-Bold', sans-serif;
-	} */
+	p, li, span, input, button, a {
+		font-family: 'Plex', sans-serif;
+	}
+
 </style>

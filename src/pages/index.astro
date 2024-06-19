@@ -3,21 +3,28 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/globals.css'
 // Supports weights 100-900
 import InteractiveContentAndButtonsJSXComponent from '@/components/WelcomeSection/InteractiveContentComponent';
-import ButtonStageSetComponent from '@/components/WelcomeSection/ButtonStageSetComponent'
-import AnimationOsiLayers from '@/components/WelcomeSection/AnimationOsiLayers'
+import InteractiveAboutJSXComponent from '@/components/AboutSection/InteractiveContentComponent';
+import ButtonStageSetComponent from '@/components/WelcomeSection/ButtonStageSetComponent';
+import AnimationOsiLayers from '@/components/WelcomeSection/AnimationOsiLayers';
+import ButtonStageSetAboutSection from '@/components/AboutSection/ButtonStageSetComponent'
+import AnimationNourishApp from '@/components/ProjectNourishSection/AnimationNourish';
+import AnimationAboutSection from '@/components/AboutSection/AnimationAbout.tsx';
+import SubHeadingClientComponent from '@/components/WelcomeSection/SubheadingClientComponent';
+import InteractiveProjectNourishJSXComponent from '@/components/ProjectNourishSection/InteractiveContentAndButtonsComponent';
+import ButtonStageSetNourishSection from '@/components/ProjectNourishSection/ButtonStageSetComponent'
 ---
 
 <Layout title="DevBlog @Kutsarov">
-	<!-- <WelcomeSection />
-	<AboutSection />
+	<!--
 	<ProjectNourishSection />
 	<ContactsSection /> -->
 
 	<!-- welcome section -->
-	<section id="welcome-section" class="flex flex-col-reverse md:grid md:grid-cols-2 w-full h-[100vh] bg-gradient-to-b from-slate-700 via-slate-800">
-		<span class="flex w-auto h-full flex-col items-center md:items-end md:justify-center">
+	<section id="welcome-section" class="grid md:grid-cols-2 bg-gradient-to-b min-h-[100vh] from-slate-700 via-slate-800 to-slate-800 w-full">
+		<span class="flex w-auto h-full flex-col ml-8 md:ml-[17vw] mt-4 md:mt-[17vh] mb-8">
 			<!-- <h1 class="text-4xl font-bold md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">Visit the Devlog</h1> -->
-			<h1 class="text-4xl font-bold  md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
+			 <SubHeadingClientComponent client:load />
+			<h1 class="text-5xl  text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
 				<span class="bg-clip-text text-transparent bg-gradient-to-b from-cyan-50 via-cyan-100 to-slate-400">
 					Visit the Devlog
 				</span>
@@ -26,9 +33,47 @@ import AnimationOsiLayers from '@/components/WelcomeSection/AnimationOsiLayers'
 			<!-- buttons -->
 			<span class="flex items-center gap-2">
 				<ButtonStageSetComponent client:load />
-				<a class="bg-slate-500/50 text-zinc-50 px-5 py-3 max-h-14 text-sm font-semibold rounded-lg flex items-center justify-center" href="#">Navigate</a>
+				<a class="bg-slate-500/50 hover:bg-slate-900 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/blog">Navigate</a>
 			</span>
 		</span>
+		<!-- flex w-360px h-640px -->
 		<AnimationOsiLayers client:load />
+	</section>
+	
+	<!-- About section -->
+	<section id="welcome-section" class="flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200">
+		<AnimationAboutSection client:visible />
+		<span class="flex pb-8 w-auto h-auto flex-col items-start px-8 justify-start">
+			<h1 class=" mt-4 md:mt-[23vh] text-6xl text-slate-700 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
+				<span class="bg-clip-text text-transparent bg-gradient-to-b from-zinc-400 via-slate-500 to-slate-600">
+					About
+				</span>
+			</h1>
+			<InteractiveAboutJSXComponent client:visible />
+
+			<span class="flex items-center gap-2">
+				<ButtonStageSetAboutSection client:visible />
+				<a class="bg-slate-700 hover:bg-emerald-600 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
+			</span>
+		</span>
+	</section>
+
+	<section id="welcome-section" class="grid md:grid-cols-2 bg-gradient-to-b min-h-[100vh] from-slate-200 via-slate-200 to-slate-400 w-full h-full">
+		<span class="flex w-auto h-auto flex-col ml-8 md:ml-[17vw] mt-4 md:mt-[17vh] mb-8">
+			<!-- <h1 class="text-4xl font-bold md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">Visit the Devlog</h1> -->
+			<h1 class="text-5xl  text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
+				<span class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800">
+					The Nourish Project
+				</span>
+			</h1>
+			<InteractiveProjectNourishJSXComponent client:load />
+			<!-- buttons -->
+			<span class="flex items-center gap-2">
+				<ButtonStageSetNourishSection client:load />
+				<a class="bg-slate-700 hover:bg-slate-900 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/blog">Navigate</a>
+			</span>
+		</span>
+		<!-- flex w-360px h-640px -->
+		<AnimationNourishApp client:visible />
 	</section>
 </Layout>

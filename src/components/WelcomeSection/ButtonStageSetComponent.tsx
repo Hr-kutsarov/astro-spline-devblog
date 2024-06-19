@@ -12,9 +12,9 @@ export default function ButtonStageSet() {
 
     return (
         <>
-        {storeHandler.stage === 0 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(1)}><RxChevronRight size={20} /></Button> : null}
-        {storeHandler.stage === 1 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(2)}><RxChevronRight size={20} /></Button> : null}
-        {storeHandler.stage === 2 ? <Button className={cn(btnStyles, 'text-cyan-700')} onClick={() => storeHandler.setStage(0)}><RxChevronLeft size={20} /></Button> : null}
+        {storeHandler.stage === 0 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(1)}><RxChevronRight size={20} /> {storeHandler.items[0].btnSecondaryText}</Button> : null}
+        {storeHandler.stage === 1 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(2)}><RxChevronRight size={20} /> {storeHandler.items[1].btnSecondaryText}</Button> : null}
+        {storeHandler.stage === 2 ? <Button className={cn(btnStyles, 'text-cyan-700')} onClick={() => storeHandler.setStage(0)}><RxChevronLeft size={20} /> {storeHandler.items[2].btnSecondaryText}</Button> : null}
         </>
     )
 }
