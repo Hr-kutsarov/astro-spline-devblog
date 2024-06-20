@@ -7,7 +7,7 @@ export default function ButtonStageSetAboutSection() {
 
     const storeHandler = projectNourishStore();
 
-    const btnStyles = 'bg-slate-200/75 backdrop-blur text-slate-600 hover:text-zinc-50 px-5 py-3 min-w-24 max-h-14 font-semibold rounded-lg hover:bg-slate-700';
+    const btnStyles = 'bg-slate-300 backdrop-blur text-zinc-50 px-5 py-3 min-w-24 max-h-14 font-semibold rounded-lg hover:text-white text-slate-900 hover:bg-slate-400';
     
 
     return (

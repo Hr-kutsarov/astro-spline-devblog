@@ -42,11 +42,11 @@ import AltButtonStageSetAboutSection from '@/components/ProjectNourishSection/Bu
 	</section>
 	
 	<!-- About section -->
-	<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
+	<section id="welcome-section" class="relative flex flex-col pt-4 lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
 		<!-- <AnimationAboutSection client:visible /> -->
 
-		<span class=' flex w-full h-full items-end justify-end'>
-			<span class="relative flex pb-8 w-auto h-full flex-col items-start ml-24 justify-start  lg:min-w-[630px]">
+		<span class=' flex w-full h-full items-end justify-start md:justify-end'>
+			<span class="relative flex pb-8 w-auto h-full flex-col items-start ml-9 lg:ml-24 justify-start  lg:min-w-[530px]">
 				<h1 class=" mt-4 md:mt-[23vh] text-6xl text-slate-700 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
 					<span class="bg-clip-text text-transparent bg-gradient-to-b from-zinc-400 via-slate-500 to-slate-600">
 						About
@@ -55,7 +55,7 @@ import AltButtonStageSetAboutSection from '@/components/ProjectNourishSection/Bu
 				<InteractiveAboutJSXComponent client:visible />
 				<span class="flex items-center gap-2">
 					<ButtonStageSetAboutSection client:visible />
-					<a class="bg-slate-700 hover:bg-emerald-600 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
+					<a class="bg-slate-700 hover:bg-slate-800 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
 				</span>
 			</span>
 
@@ -63,9 +63,9 @@ import AltButtonStageSetAboutSection from '@/components/ProjectNourishSection/Bu
 		<AnimationAboutSection client:visible />
 	</section>
 
-	<section id="welcome-section" class="grid md:grid-cols-2 relative bg-gradient-to-b min-h-[100vh] from-slate-200 via-slate-100 to-white w-full h-full">
+	<section id="welcome-section" class="grid md:grid-cols-2 relative bg-gradient-to-b min-h-[100vh] px-8 from-slate-200 via-slate-100 to-white w-full h-full">
 		<AltButtonStageSetAboutSection client:load />
-		<span class="flex w-auto h-auto flex-col mx-4 md:ml-[17vw] mt-4 md:mt-[17vh] mb-8">
+		<span class="flex w-auto h-auto flex-col md:ml-[17vw] mt-4 md:mt-[17vh] mb-8">
 			<!-- <h1 class="text-4xl font-bold md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">Visit the Devlog</h1> -->
 			<h1 class="text-5xl  text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
 				<span class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800">
