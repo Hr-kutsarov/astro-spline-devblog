@@ -1,0 +1,30 @@
+---
+import InteractiveAboutJSXComponent from '@/components/AboutSection/InteractiveContentComponent';
+import ButtonStageSetAboutSection from '@/components/AboutSection/ButtonStageSetComponent'
+import AnimationAboutSection from '@/components/AboutSection/AnimationAbout.tsx';
+import Layout from '@/layouts/Layout.astro';
+import '@/styles/globals.css'
+---
+
+<Layout title="About@DevBlog">
+<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
+    <!-- <AnimationAboutSection client:visible /> -->
+
+    <span class=' flex w-full h-full items-end justify-end'>
+        <span class="relative flex pb-8 w-auto h-full flex-col items-start ml-24 justify-start  lg:min-w-[630px]">
+            <h1 class=" mt-4 md:mt-[23vh] text-6xl text-slate-700 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">
+                <span class="bg-clip-text text-transparent bg-gradient-to-b from-zinc-400 via-slate-500 to-slate-600">
+                    About
+                </span>
+            </h1>
+            <!-- <InteractiveAboutJSXComponent client:visible /> -->
+            <span class="flex items-center gap-2">
+                <!-- <ButtonStageSetAboutSection client:visible /> -->
+                <a class="bg-slate-700 hover:bg-emerald-600 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
+            </span>
+        </span>
+
+    </span>
+    <AnimationAboutSection client:visible />
+</section>
+</Layout>
