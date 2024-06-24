@@ -1,0 +1,21 @@
+---
+
+import AnimationAboutSection from '@/components/AboutSection/AnimationAbout.tsx';
+import Layout from '@/layouts/Layout.astro';
+import '@/styles/globals.css'
+import IntroAboutTypographyComponent from '@/components/AboutPage/IntroTypography';
+---
+
+<Layout title="About@DevBlog">
+<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
+    <!-- <AnimationAboutSection client:visible /> -->
+
+    <span class=' flex w-full h-full items-end justify-end'>
+        <span class="relative flex pb-8 w-auto h-full flex-col items-start ml-24 justify-start  lg:min-w-[630px]">
+            <IntroAboutTypographyComponent client:load />
+        </span>
+        <h1 class="text-8xl">BLOG</h1>
+    </span>
+    <AnimationAboutSection client:visible />
+</section>
+</Layout>
