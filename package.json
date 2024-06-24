@@ -2,7 +2,7 @@
   "name": "astro-spline-devblog",
   "type": "module",
   "version": "0.0.1",
-  "scripts": {  
+  "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -24,6 +24,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
+    "lenis": "^1.1.3",
     "lucide-react": "^0.395.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
