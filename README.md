@@ -1,58 +1,104 @@
-# 🧑‍🚀 **Astro is the best** 
+# MPA built with Astro representing a portfolio page
 
-<!-- # Astro Starter Kit: Basics
+Using Astro as a backbone to build stateful components exactly where needed
 
-```sh
-npm create astro@latest -- --template basics
+## Tech stack
+
+#### State manager - *Zustand* - global for all components on a specific page. Provides shared state within all components. Enables storage of multiple objects, getters and setters in least amount of complexity.
+
+#### Spline models - *Spline* is a great tool to add animations within a div block somewhere on the DOM tree. That block itself can have it's own camera perspective, animation timeline and interactivity. Fun fact - importing this in native <i>script</i> tag will show the logo which might be hidden if the user has purchased the premium plan. Using the npm library 'spline/tools' and 'spline/runtime' to render the object url do not render with logo. And all it takes is to just load Spline objects in JSX components. Neat.
+
+
+```
+import Spline from '@splinetool/react-spline';
+
+    <div className={...}>
+        <Spline scene="https://prod.spline.design/SampleScene/scene.splinecode" />
+    </div>
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+#### Motion divs - *FramerMotion* - literally all that is needed to add motion to DOM elements. Just prefix your 'div' element with 'motion' as such
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+<motion.div>
+    <!-- content -->
+</motion.div>
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+DOM elements can be easily manipulated to achieve either of the five main techniques used in award-winning designs
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Scroll tracking
+- Viewport detection
+- Screen position - sticky, absolute, relative, hidden
 
-Any static assets, like images, can be placed in the `public/` directory.
+Aso the fifth and most popular technique is smooth scrolling.
 
-## 🧞 Commands
+#### Smooth scrolling - *Lenis* the most popular tool out there.
 
-All commands are run from the root of the project, from a terminal:
+```
+  const [state, setState] = useState(null);
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+  const lenis = useLenis(({ scroll }) => {
+    setState(scroll);
+  });
+```
 
-## 👀 Want to learn more?
+Tip: use the numerical value to calculate linear and curvature effects in you designs. This project contains few examples of changing the styles={{...}} property directly
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- margins
+- scaling
+- offset
 
- -->
+#### Animating SVGs
+
+
+```
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.path
+
+
+            <!-- animation controls -->
+
+            initial={{pathLength: 0}}
+            animate={{pathLength: 1}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+
+            <!-- animation controls -->
+
+
+            d="..."
+            stroke="#..."
+            strokeWidth="..."
+          />
+        </svg>
+```
+
+#### Conditional rendering
+
+Example
+
+```
+const stateHandler = zustandStore();
+
+
+return (
+    <AnimatePresence mode="...">
+        {state ? <> <ExampleComponent /> </> : null}
+    </AnimatePresence>
+)
+
+```
+
+Explanation: Controlling some sort of state is important for triggering listed items within an *AnimatePresence* block. If any of the object properties are changed or the list that is mapped dynaimically with the JSX element just shifts indexes the animations *onExit={{...}}* WILL NOT TRIGGER. In other words *AnimatePresence* uses critical logic to know when to trigger *onExit* animations.
+
+
+# Development stage
+
+This web app is currently deployed at [this url (hosted @Vercel)](https://web-devlog-kutsarov.vercel.app/).
+
