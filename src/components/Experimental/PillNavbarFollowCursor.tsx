@@ -2,9 +2,6 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { useRef, useState } from "react";
 import { ReactLenis, useLenis } from 'lenis/react';
-
-// source https://www.youtube.com/watch?v=obib4ka06y0
-
 interface PositionProps {
     left: number,
     width: number,
@@ -16,7 +13,6 @@ export default function PillNavBarComponent() {
     const ref = useRef(null);
     const lenis = useLenis(({ scroll }) => {
         // called every scroll
-        // console.log(scroll)
         setState(scroll)
       }, )
 
@@ -65,9 +61,8 @@ const LinkItem = ({ children, href, setPosition } : any) => {
 
     const movePos = () : void => {
         if (!ref.current) return;
-        const {width } = ref?.current?.getBoundingClientRect();
-        // const data = ref?.current?.getBoundingClientRect();
-        // console.log(data)
+        const { width } = ref?.current?.getBoundingClientRect();
+
 
         setPosition({
             width,
