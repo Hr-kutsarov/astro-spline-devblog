@@ -8,7 +8,7 @@ export default function AltButtonStageSetAboutSection() {
 
     const storeHandler = projectNourishStore();
 
-    const btnStyles = 'bg-slate-500/75 backdrop-blur text-slate-50 hover:text-zinc-50 aspect-square min-w-24 min-h-24 tracking-wide font-semibold rounded-full hover:bg-slate-700';
+    const btnStyles = 'bg-green-500 backdrop-blur text-slate-50 hover:text-zinc-50 aspect-square min-w-24 min-h-24 tracking-wide font-semibold rounded-full hover:bg-slate-700';
     
 
     return (

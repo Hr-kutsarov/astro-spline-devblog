@@ -7,7 +7,7 @@ export default function ButtonStageSet() {
 
     const storeHandler = welcomeSectionDataStore();
 
-    const btnStyles = 'bg-slate-500/10 backdrop-blur text-zinc-50 px-5 py-3 min-w-24 max-h-14 font-semibold rounded-lg hover:bg-slate-200';
+    const btnStyles = 'bg-slate-500/10 backdrop-blur text-zinc-50 px-5 py-3 min-w-24 max-h-14 font-semibold rounded-lg hover:bg-slate-200 hover:text-slate-800';
     
 
     return (

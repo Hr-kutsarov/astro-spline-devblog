@@ -22,7 +22,7 @@ export default function InteractiveProjectNourishJSXComponent() {
     return (
         <>
         <AnimatePresence mode="wait">
-        <div className='bg-transparent flex w-auto h-auto min-w-[330px] '>
+        <div className='bg-transparent flex w-auto h-auto min-w-[330px] mt-4'>
             
             {storeHandler.stage === 0 ? [storeHandler.items[0]].map((el, idx) => 
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
@@ -43,7 +43,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem1}
                             </span>
                             {el.pItem1 ? 
@@ -59,7 +59,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.2}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem2}
                             </span>
                             {el.pItem2 ? 
@@ -75,7 +75,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.4}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem3}
                             </span>
                             {el.pItem3 ? 
@@ -91,7 +91,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.6}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem4}
                             </span>
                             {el.pItem4 ? 
@@ -122,7 +122,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem1}
                             </span>
                             {el.pItem1 ? 
@@ -138,7 +138,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.2}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem2}
                             </span>
                             {el.pItem2 ? 
@@ -154,7 +154,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.4}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem3}
                             </span>
                             {el.pItem3 ? 
@@ -170,7 +170,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.6}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem4}
                             </span>
                             {el.pItem4 ? 
@@ -201,7 +201,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem1}
                             </span>
                             {el.pItem1 ? 
@@ -217,7 +217,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.2}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem2}
                             </span>
                             {el.pItem2 ? 
@@ -233,7 +233,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.4}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem3}
                             </span>
                             {el.pItem3 ? 
@@ -249,7 +249,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         animate={{x: 0, opacity: 1}}
                         transition={{ duration: 0.4, delay: 0.6}}>
                             <span className={cn(liStyles)}>
-                                <span className='absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
+                                <span className='absolute hidden group-hover:flex text-green-400 top-1 -left-8 z-40'><RxChevronRight size={22} /></span>
                             {el.liItem4}
                             </span>
                             {el.pItem4 ? 

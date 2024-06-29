@@ -36,7 +36,7 @@ const h1Styles: string = "text-6xl mt-[17vh]"
 				<!-- buttons -->
 				<span class="flex items-center gap-2">
 					<ButtonStageSetComponent client:load />
-					<a class="bg-slate-500/50 hover:bg-slate-900 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/blog">Navigate</a>
+					<a class="bg-slate-500 hover:bg-slate-700 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/blog">Navigate</a>
 				</span>
 			</span>
 		</span>
@@ -66,21 +66,21 @@ const h1Styles: string = "text-6xl mt-[17vh]"
 		<AnimationAboutSection client:visible />
 	</section>
 
-	<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b from-slate-200 via-slate-100 to-white">
+	<section id="welcome-section" class="mb-40 relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b from-slate-200 via-slate-100 to-white">
 		<AltButtonStageSetAboutSection client:load />
 		<span class={cn(responsiveWrapperStyles)}>
 			<span class={cn(textWrapperStyles)}>
 				<!-- <h1 class="text-4xl font-bold md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">Visit the Devlog</h1> -->
 				<h1 class={cn(h1Styles, 'text-slate-50')}>
 					<span class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800">
-						The Nourish Project
+						Nourish
 					</span>
 				</h1>
 				<InteractiveProjectNourishJSXComponent client:load />
 				<!-- buttons -->
 				<span class="flex items-center gap-2">
 					<ButtonStageSetNourishSection client:load />
-					<a class="bg-slate-700 hover:bg-slate-900 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
+					<a class="bg-slate-700 hover:bg-green-500 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
 				</span>
 			</span>
 		</span>

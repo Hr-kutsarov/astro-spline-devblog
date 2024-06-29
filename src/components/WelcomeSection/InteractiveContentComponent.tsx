@@ -9,10 +9,11 @@ export default function InteractiveContentAndButtonsJSXComponent() {
   const storeHandler = welcomeSectionDataStore();
 
   const x = "flex flex-col items-start";
-  const ulStyles: string = "flex flex-col gap-2 mb-6";
-  const subText: string =
-    "flex text-lg text-slate-400 uppercase max-w-[320px] pb-4";
-  const liStyles = " text-lg font-bold ";
+
+  const h2Styles: string = 'flex text-lg md:text-2xl tracking-wider text-slate-400 uppercase max-w-[320px] mb-4 md:mb-8';
+  const liStyles: string =  'group relative bg-clip-text text-transparent bg-gradient-to-b from-slate-400 via-slate-500 to-slate-500';
+  const ulStyles: string = 'max-w-[320px] md:max-w-[430px] lg:max-w-[530px] mb-8 flex flex-col items-start justify-center gap-4';
+  const liWrapperStyles: string = 'bg-clip-text text-lg md:text-2xl font-bold';
 
   return (
     <>
@@ -21,7 +22,7 @@ export default function InteractiveContentAndButtonsJSXComponent() {
           {storeHandler.stage === 0
             ? [storeHandler.items[0]].map((el, idx) => (
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
-                  <ul className={cn(ulStyles)}>
+                  <ul className={cn(ulStyles, liWrapperStyles)}>
                     {el.liItem1 ? (
                       <motion.li
                         className={cn(liStyles)}
@@ -89,7 +90,7 @@ export default function InteractiveContentAndButtonsJSXComponent() {
           {storeHandler.stage === 1
             ? [storeHandler.items[1]].map((el, idx) => (
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
-                  <ul className={cn(ulStyles)}>
+                  <ul className={cn(ulStyles, liWrapperStyles)}>
                     {el.liItem1 ? (
                       <motion.li
                         className={cn(liStyles)}
@@ -157,7 +158,7 @@ export default function InteractiveContentAndButtonsJSXComponent() {
           {storeHandler.stage === 2
             ? [storeHandler.items[2]].map((el, idx) => (
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
-                  <ul className={cn(ulStyles)}>
+                  <ul className={cn(ulStyles, liWrapperStyles)}>
                     <motion.li
                       className="bg-clip-text"
                       initial={{ x: -50, opacity: 0 }}
