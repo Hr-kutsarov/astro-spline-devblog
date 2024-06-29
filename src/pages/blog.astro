@@ -1,13 +1,30 @@
 ---
-
-import AnimationAboutSection from '@/components/AboutSection/AnimationAbout.tsx';
-import Layout from '@/layouts/Layout.astro';
 import '@/styles/globals.css'
-import IntroAboutTypographyComponent from '@/components/AboutPage/IntroTypography';
+import PillNavBarComponent from '@/components/Experimental/PillNavbarFollowCursor';
+
+import LoadingReactComponent from '@/components/BlogPage/LoadingReactComponent';
+import MainSectionWelcomeAnimation from '@/components/BlogPage/Main';
+import LayoutBlog from '@/layouts/LayoutBlog.astro';
+
 ---
 
-<Layout title="About@DevBlog">
-<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
-    <h1>ToDO</h1>
+<LayoutBlog title="About@DevBlog">
+
+<section id="welcome-section" class="relative flex flex-col items-center w-full h-full min-h-[100vh] bg-slate-200">
+    <PillNavBarComponent client:load />
+    <!-- content wrapper -->
+    <span class="px-4 justify-center flex flex-col w-full h-auto max-h-[100vh] max-w-[960px] border-2 border-slate-500/5 border-dotted min-h-[74vh] mt-14 relative">
+
+        <!-- welcome animation -->
+        <!-- <h2 id="topic-welcome" class="flex w-full justify-center font-semibold text-slate-400 tracking-wider ">welcome</h2> -->
+        <MainSectionWelcomeAnimation client:load />
+        <!-- <h2 class="flex w-full justify-center font-semibold text-slate-400 tracking-wide italic">from graphic design to web development</h2> -->
+        <!-- appearing animation from behind -->
+        <LoadingReactComponent client:load />
+
+    </span>
+    <!-- /content wrapper -->
 </section>
 </Layout>
+
+
