@@ -1,22 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/LayoutProjects.astro';
 import '../styles/globals.css'
-// Supports weights 100-900
-import InteractiveContentAndButtonsJSXComponent from '@/components/WelcomeSection/InteractiveContentComponent';
-import ButtonStageSetComponent from '@/components/WelcomeSection/ButtonStageSetComponent'
-import AnimationOsiLayers from '@/components/WelcomeSection/AnimationOsiLayers'
+import MainNavbar from '@/components/navbars/MainNavbar';
+import HeroSection from '@/components/theNourishProject/Hero';
+import GridComposition from '@/components/theNourishProject/GridComposition1'
 ---
 
 <Layout title="DevBlog @Kutsarov">
-	<!-- <WelcomeSection />
-	<AboutSection />
-	<ProjectNourishSection />
-	<ContactsSection /> -->
-
-	<!-- welcome section -->
-	<section id="welcome-section" class="flex flex-col-reverse md:grid md:grid-cols-2 w-full h-[100vh] bg-gradient-to-b from-slate-700 via-slate-800 to-slate-800">
-		<span class="flex w-auto h-full flex-col items-center md:items-end md:justify-center">
-
-		<AnimationOsiLayers client:load />
-	</section>
+	<main class="flex flex-col bg-transparent h-full items-center relative" >
+	<!-- <MainNavbar client:load /> -->
+	<HeroSection client:load />
+	<GridComposition client:load />
+	</main>
 </Layout>
