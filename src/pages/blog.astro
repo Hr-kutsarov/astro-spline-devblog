@@ -5,6 +5,7 @@ import PillNavBarComponent from '@/components/Experimental/PillNavbarFollowCurso
 import LoadingReactComponent from '@/components/BlogPage/LoadingReactComponent';
 import MainSectionWelcomeAnimation from '@/components/BlogPage/Main';
 import LayoutBlog from '@/layouts/LayoutBlog.astro';
+import RTFExample from '@/components/BlogPage/RTF_example';
 
 ---
 
@@ -17,11 +18,12 @@ import LayoutBlog from '@/layouts/LayoutBlog.astro';
 
         <!-- welcome animation -->
         <!-- <h2 id="topic-welcome" class="flex w-full justify-center font-semibold text-slate-400 tracking-wider ">welcome</h2> -->
-        <MainSectionWelcomeAnimation client:load />
+        <!-- <MainSectionWelcomeAnimation client:load /> -->
         <!-- <h2 class="flex w-full justify-center font-semibold text-slate-400 tracking-wide italic">from graphic design to web development</h2> -->
         <!-- appearing animation from behind -->
-        <LoadingReactComponent client:load />
-
+        <!-- <LoadingReactComponent client:load /> -->
+        <!-- experiment with gsap and react-three-fiber -->
+         <RTFExample client:load />
     </span>
     <!-- /content wrapper -->
 </section>

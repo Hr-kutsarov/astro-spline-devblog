@@ -1,0 +1,97 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource-variable/raleway";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+	</head>
+	<body class="flex flex-col">
+		<slot />
+	</body>
+</html>
+<style is:global>
+
+	html,
+	body,
+	:root {
+		height: 100%;
+	}
+	
+	/* PT SANS 25px for subtitles */
+	@font-face {
+		font-family: 'PT-Sans';
+		src: url('/src/fonts/PT_Sans/PTSans-Regular.ttf') format('trueType');
+	}
+
+	/* TEKO for headings */
+	@font-face {
+		font-family: 'Teko';
+		src: url('/src/fonts/Teko/static/Teko-Regular.ttf') format('trueType');
+	}
+
+	/* ibm plex sans for  */
+	@font-face {
+		font-family: 'Plex';
+		src: url('/src/fonts/IBM_Plex_Sans_Condensed/IBMPlexSansCondensed-Regular.ttf') format('trueType');
+	}
+
+    	/* ibm plex sans for  */
+	@font-face {
+		font-family: 'Lobster_Two';
+		src: url('/src/fonts//Lobster_Two/LobsterTwo-Regular.ttf') format('trueType');
+	}
+
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		/* background: #13151a;
+		background-size: 224px; */
+		scroll-behavior: smooth;
+	}
+	code {
+		font-family:
+			
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	* {
+		font-family: "Plex", sans-serif;
+	}
+	
+	h1 {
+		font-family: 'Lobster_Two', sans-serif;
+	}
+
+
+</style>

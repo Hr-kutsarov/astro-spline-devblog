@@ -1,90 +1,136 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '@/styles/globals.css'
-import { cn } from '@/lib/utils';
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
 
-import InteractiveContentAndButtonsJSXComponent from '@/components/WelcomeSection/InteractiveContentComponent';
-import InteractiveAboutJSXComponent from '@/components/AboutSection/InteractiveContentComponent';
-import ButtonStageSetComponent from '@/components/WelcomeSection/ButtonStageSetComponent';
-import AnimationOsiLayers from '@/components/WelcomeSection/AnimationOsiLayers';
-import ButtonStageSetAboutSection from '@/components/AboutSection/ButtonStageSetComponent'
-import AnimationNourishApp from '@/components/ProjectNourishSection/AnimationNourish';
-import AnimationAboutSection from '@/components/AboutSection/AnimationAbout.tsx';
-import InteractiveProjectNourishJSXComponent from '@/components/ProjectNourishSection/InteractiveContentAndButtonsComponent';
-import ButtonStageSetNourishSection from '@/components/ProjectNourishSection/ButtonStageSetComponent';
-import AltButtonStageSetAboutSection from '@/components/ProjectNourishSection/ButtonStageSetComponentAlt';
+import InteractiveContentAndButtonsJSXComponent from "@/components/WelcomeSection/InteractiveContentComponent";
+import InteractiveAboutJSXComponent from "@/components/AboutSection/InteractiveContentComponent";
+import ButtonStageSetComponent from "@/components/WelcomeSection/ButtonStageSetComponent";
+import AnimationOsiLayers from "@/components/WelcomeSection/AnimationOsiLayers";
+import ButtonStageSetAboutSection from "@/components/AboutSection/ButtonStageSetComponent";
+import AnimationNourishApp from "@/components/ProjectNourishSection/AnimationNourish";
+import AnimationAboutSection from "@/components/AboutSection/AnimationAbout.tsx";
+import InteractiveProjectNourishJSXComponent from "@/components/ProjectNourishSection/InteractiveContentAndButtonsComponent";
+import ButtonStageSetNourishSection from "@/components/ProjectNourishSection/ButtonStageSetComponent";
+import AltButtonStageSetAboutSection from "@/components/ProjectNourishSection/ButtonStageSetComponentAlt";
+import AnimatedArrowDownComponent from "@/components/Experimental/AnimatedArrowDown";
 
-const responsiveWrapperStyles: string = 'flex w-full h-full items-start justify-start md:justify-end min-w-[360px]';
-const textWrapperStyles = "flex w-auto h-full flex-col w-[330px] md:w-[360px] lg:w-[420px] ml-8 md:ml-12";
-const h1Styles: string = "text-6xl mt-[17vh]"
+const h1Styles: string = "text-6xl w-auto flex max-w-[290px] my-8";
 ---
 
 <Layout title="DevBlog @Kutsarov">
-	<!--
+  <!--
 	<ContactsSection /> -->
 
-	<!-- sets the width and background of the entire section -->
-	<section id="welcome-section" class="grid md:grid-cols-2 bg-gradient-to-b min-h-[100vh] from-slate-700 via-slate-800 to-slate-800 w-full pb-40 md:mb-0">
-		<span class={cn(responsiveWrapperStyles)}>
-			<span class={cn(textWrapperStyles)}>
-				<h1 class={cn(h1Styles, 'text-slate-50')}>
-					<span class="bg-clip-text text-transparent bg-gradient-to-b from-cyan-50 via-cyan-100 to-slate-400">
-						Visit the Devlog
-					</span>
-				</h1>
-				<InteractiveContentAndButtonsJSXComponent client:load />
-				<!-- buttons -->
-				<span class="flex items-center gap-2">
-					<ButtonStageSetComponent client:load />
-					<a class="bg-slate-500 hover:bg-slate-700 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/blog">Navigate</a>
-				</span>
-			</span>
-		</span>
-		<!-- flex w-360px h-640px -->
-		<AnimationOsiLayers client:load />
-	</section>
-	
-	<!-- About section -->
-	<section id="welcome-section" class="relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b  from-slate-50 via-slate-100 to-slate-200">
-		<!-- <AnimationAboutSection client:visible /> -->
+  <!-- sets the width and background of the entire section -->
+  <section
+    id="welcome-section"
+    class="relative flex flex-col items-center min-h-[1200px] lg:min-h-[82vh] bg-gradient-to-b from-slate-700 via-slate-800 to-slate-800 w-screen"
+  >
+    <!-- wrapper -->
+    <span class="grid grid-cols-1 md:grid-cols-2 h-full w-full max-w-[1230px]">
+      <span
+        class={cn(
+          "w-full flex flex-col items-start justify-center px-8 md:px-20 "
+        )}
+      >
+        <h1 class={cn(h1Styles, "text-slate-50")}>
+          <span
+            class="bg-clip-text text-transparent h-[120%] px-2 bg-gradient-to-b from-cyan-50 via-cyan-100 to-slate-400"
+          >
+            Visit the Devlog
+          </span>
+        </h1>
+        <InteractiveContentAndButtonsJSXComponent client:load />
+        <!-- buttons -->
+        <span class="flex w-auto gap-4">
+          <ButtonStageSetComponent client:load />
+          <a
+            class="w-full bg-slate-500 hover:bg-slate-700 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center"
+            href="/blog">Navigate</a
+          >
+        </span>
+      </span>
+      <div
+        class="w-full bg-transparent relative z-25 flex items-center justify-center"
+      >
+        <AnimationOsiLayers client:load />
+        <a
+          class="cursor-pointer flex absolute top-[42%] left-[43%] z-50 aspect-square rounded-full items-center justify-center"
+          href="#about-section"
+        >
+          <!-- animated arrow down -->
+          <AnimatedArrowDownComponent client:load />
+        </a>
+      </div>
+    </span>
+  </section>
 
-		<span class={cn(responsiveWrapperStyles)}>
-			<span class={cn(textWrapperStyles)}>
-				<h1 class={cn(h1Styles, 'text-slate-50')}>
-					<span class="bg-clip-text text-transparent bg-gradient-to-b from-zinc-400 via-slate-500 to-slate-600">
-						About
-					</span>
-				</h1>
-				<InteractiveAboutJSXComponent client:visible />
-				<span class="flex items-center gap-2">
-					<ButtonStageSetAboutSection client:visible />
-					<a class="bg-slate-700 hover:bg-slate-800 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center" href="/about">Navigate</a>
-				</span>
-			</span>
+  <!-- About section -->
+  <section
+    id="about-section"
+    class="relative flex flex-col items-center min-h-[1200px] lg:min-h-[82vh] bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200"
+  >
+    <span class="grid grid-cols-1 md:grid-cols-2 h-full w-full max-w-[1230px]">
+      <span
+        class={cn(
+          "w-full flex flex-col items-start justify-center px-8 md:px-20 "
+        )}
+      >
+        <h1 class={cn(h1Styles, "text-slate-50")}>
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-b from-zinc-400 via-slate-500 to-slate-600"
+          >
+            About
+          </span>
+        </h1>
+        <InteractiveAboutJSXComponent client:visible />
+        <span class="flex items-center gap-2">
+          <ButtonStageSetAboutSection client:visible />
+          <a
+            class="w-full bg-slate-700 hover:bg-slate-800 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center"
+            href="/about">Navigate</a
+          >
+        </span>
+      </span>
+      <span class="flex w-full h-full items-center justify-center">
+        <AnimationAboutSection client:visible />
+      </span>
+    </span>
+  </section>
 
-		</span>
-		<AnimationAboutSection client:visible />
-	</section>
-
-	<section id="welcome-section" class="mb-40 relative flex flex-col lg:grid lg:grid-cols-2 w-full h-full min-h-[100vh] bg-gradient-to-b from-slate-200 via-slate-100 to-white">
-		<AltButtonStageSetAboutSection client:load />
-		<span class={cn(responsiveWrapperStyles)}>
-			<span class={cn(textWrapperStyles)}>
-				<!-- <h1 class="text-4xl font-bold md:text-6xl text-slate-50 max-w-[320px] md:max-w-[460px] mb-2 md:mb-6">Visit the Devlog</h1> -->
-				<h1 class={cn(h1Styles, 'text-slate-50')}>
-					<span class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800">
-						Nourish
-					</span>
-				</h1>
-				<InteractiveProjectNourishJSXComponent client:load />
-				<!-- buttons -->
-				<span class="flex items-center gap-2">
-					<ButtonStageSetNourishSection client:load />
-					<a class="bg-slate-700 hover:bg-green-500 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center" href="/thenourishproject">Navigate</a>
-				</span>
-			</span>
-		</span>
-		<!-- flex w-360px h-640px -->
-		<AnimationNourishApp client:visible />
-	</section>
+  <section
+    id="nourish-section"
+    class="relative flex flex-col items-center min-h-[1200px] lg:min-h-[82vh] bg-gradient-to-b from-slate-200 via-slate-100 to-white"
+  >
+    <AltButtonStageSetAboutSection client:load />
+    <span class="grid grid-cols-1 md:grid-cols-2 h-full w-full max-w-[1230px]">
+      <span
+        class={cn(
+          "w-full flex flex-col items-start justify-center px-8 md:px-20 "
+        )}
+      >
+        <h1 class={cn(h1Styles, "text-slate-50")}>
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800"
+          >
+            Nourish
+          </span>
+        </h1>
+        <InteractiveProjectNourishJSXComponent client:load />
+        <span class="flex items-center gap-2">
+          <ButtonStageSetNourishSection client:load />
+          <a
+            class="bg-slate-700 hover:bg-green-500 hover:shadow-inner text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider rounded-lg flex items-center justify-center"
+            href="/thenourishproject">Navigate</a
+          >
+        </span>
+      </span>
+      <span
+        class="bg-transparent flex w-full h-full items-center justify-center overflow-hidden mt-12"
+      >
+        <AnimationNourishApp client:visible />
+      </span>
+    </span>
+  </section>
 </Layout>
