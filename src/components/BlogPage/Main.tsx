@@ -1,6 +1,10 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from 'framer-motion';
 
+
+//  UNUSED
+
+
 export default function MainSectionWelcomeAnimation() {
     return (
         // <span className="px-4 justify-center flex flex-col w-full h-auto max-h-[100vh] max-w-[660px] border-2 border-slate-500/5 border-dotted min-h-[74vh] mt-14">
