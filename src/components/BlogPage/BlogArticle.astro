@@ -1,0 +1,53 @@
+---
+import '@/styles/globals.css'
+import { cn } from '@/lib/utils';
+import type { BlogPostProps } from '@/lib/BlogPosts';
+
+const { data } = Astro.props;
+const liStyles: string = cn("bg-gradient-to-br rounded-lg");
+
+const blogpost: BlogPostProps = data;
+
+---
+
+
+
+<li class={cn(
+    data.primary && 'col-span-4 xl:col-span-4 from-slate-900 via-zinc-900 to-slate-800',
+    data.secondary && 'col-span-4 xl:col-span-2 h-auto from-slate-200 to-zinc-100 ',
+    data.tertiary && 'col-span-2 xl:col-span-1 from-zinc-200 to-zinc-100',
+    liStyles
+    )}>
+                
+    <article class={cn(
+        "group relative bg-gradient-to-br  px-6 py-4 flex flex-col w-full h-full border-2 rounded-lg shadow-lg",
+        
+    )}>
+        <h2 class={cn(
+            data.primary ? "text-zinc-200": "text-zinc-600",
+        "group-hover:translate-y-1 transition-all my-2", "text-4xl font-bold")}>{blogpost?.title}</h2>
+        <h3 class={cn(
+            data.primary ? "text-zinc-50": "text-zinc-600",
+            "group-hover:opacity-100 opacity-50 transition-all text-2xl font-semibold mb-4",
+
+        )}>{blogpost?.subtitle}</h3>
+        <p class={cn(
+            data.primary ? "text-white": "text-zinc-600",
+            "text-lg  transition-all mb-8 text-balance"
+        )}>{blogpost?.content}</p>
+
+        <span class={
+            cn(
+            data.primary ? "group-hover:bg-zinc-200 group-hover:text-zinc-600" : "bg-transparent",
+                "absolute transition-all right-2 bottom-2 h-10 items-center justify-center flex px-5 py-2 text-normal text-zinc-400 rounded-full"
+            )
+        }>
+            {blogpost?.dateCreated}
+        </span>
+
+    </article>
+                
+                
+</li>
+
+
