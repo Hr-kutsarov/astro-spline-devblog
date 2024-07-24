@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/LayoutProjects.astro';
 import '../styles/globals.css'
-import MainNavbar from '@/components/navbars/MainNavbar';
 import HeroSection from '@/components/theNourishProject/Hero';
-import GridComposition from '@/components/theNourishProject/GridComposition1'
+import GridComposition from '@/components/theNourishProject/GridComposition1';
+import DemoSection from '@/components/theNourishProject/DemoSection';
 ---
 
 <Layout title="DevBlog @Kutsarov">
@@ -11,5 +11,6 @@ import GridComposition from '@/components/theNourishProject/GridComposition1'
 	<!-- <MainNavbar client:load /> -->
 	<HeroSection client:load />
 	<GridComposition client:load />
+	<DemoSection client:load />
 	</main>
 </Layout>
