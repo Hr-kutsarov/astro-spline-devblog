@@ -6,7 +6,7 @@ const HeroSection = () => {
 
     // css
 
-    const sectionShape: string = "px-8 pt-40 pb-16 grid grid-cols-1  min-h-screen w-full";
+    const sectionShape: string = "px-8 pt-40 pb-16 grid grid-cols-1  min-h-[82vh] w-full";
     const sectionColors: string = "bg-gradient-to-br from-zinc-800 via-slate-800 to-emerald-900";
     const sectionResponsive: string = "md:grid-cols-2"
     const temp1: string = '-mt-16 relative'
