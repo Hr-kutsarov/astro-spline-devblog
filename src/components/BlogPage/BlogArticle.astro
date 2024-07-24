@@ -1,53 +1,93 @@
 ---
-import '@/styles/globals.css'
-import { cn } from '@/lib/utils';
-import type { BlogPostProps } from '@/lib/BlogPosts';
+import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
+import type { BlogPostProps } from "@/lib/BlogPosts";
+import { Button } from "../ui/button";
 
 const { data } = Astro.props;
-const liStyles: string = cn("bg-gradient-to-br rounded-lg");
+const liStyles: string = cn("bg-gradient-to-br rounded-2xl");
 
 const blogpost: BlogPostProps = data;
-
 ---
 
-
-
-<li class={cn(
-    data.primary && 'col-span-4 xl:col-span-4 from-slate-900 via-zinc-900 to-slate-800',
-    data.secondary && 'col-span-4 xl:col-span-2 h-auto from-slate-200 to-zinc-100 ',
-    data.tertiary && 'col-span-2 xl:col-span-1 from-zinc-200 to-zinc-100',
+<li
+  class={cn(
+    blogpost.primary &&
+      "col-span-6 xl:col-span-3 from-slate-900 via-zinc-900 to-slate-800 min-h-[40vh]",
+    blogpost.secondary &&
+      "col-span-6 md:col-span-3 xl:col-span-3 h-auto from-slate-200 to-zinc-100 ",
+    blogpost.tertiary &&
+      "col-span-6 md:col-span-3 xl:col-span-2 from-zinc-200 to-zinc-100",
     liStyles
-    )}>
-                
-    <article class={cn(
-        "group relative bg-gradient-to-br  px-6 py-4 flex flex-col w-full h-full border-2 rounded-lg shadow-lg",
-        
-    )}>
-        <h2 class={cn(
-            data.primary ? "text-zinc-200": "text-zinc-600",
-        "group-hover:translate-y-1 transition-all my-2", "text-4xl font-bold")}>{blogpost?.title}</h2>
-        <h3 class={cn(
-            data.primary ? "text-zinc-50": "text-zinc-600",
-            "group-hover:opacity-100 opacity-50 transition-all text-2xl font-semibold mb-4",
+  )}
+>
+  <article
+    class={cn(
+      "group relative bg-gradient-to-br  px-6 py-4 flex flex-col w-full h-full border-2 rounded-lg shadow-lg"
+    )}
+  >
+    <h2
+      class={cn(
+        blogpost.primary ? "text-zinc-200" : "text-zinc-600",
+        " transition-all my-2",
+        "text-4xl font-bold"
+      )}
+    >
+      {blogpost?.title}
+    </h2>
+    <h3
+      class={cn(
+        blogpost.primary
+          ? "text-zinc-50 font-normal"
+          : "text-zinc-600 font-semibold",
+        "group-hover:opacity-100 opacity-50 transition-all text-lg  mb-4"
+      )}
+    >
+      {blogpost?.subtitle}
+    </h3>
+    <p
+      class={cn(
+        blogpost.primary ? "text-white" : "text-zinc-600",
+        "text-lg  transition-all mb-8 text-balance"
+      )}
+    >
+      {blogpost?.content}
+    </p>
 
-        )}>{blogpost?.subtitle}</h3>
-        <p class={cn(
-            data.primary ? "text-white": "text-zinc-600",
-            "text-lg  transition-all mb-8 text-balance"
-        )}>{blogpost?.content}</p>
 
-        <span class={
-            cn(
-            data.primary ? "group-hover:bg-zinc-200 group-hover:text-zinc-600" : "bg-transparent",
-                "absolute transition-all right-2 bottom-2 h-10 items-center justify-center flex px-5 py-2 text-normal text-zinc-400 rounded-full"
-            )
-        }>
-            {blogpost?.dateCreated}
-        </span>
 
-    </article>
-                
-                
+    <span
+      class={cn(
+        blogpost.primary ? " group-hover:text-zinc-50" : "bg-transparent",
+        "absolute transition-all right-2 bottom-3 h-10 items-center justify-center flex px-5 py-2 text-normal text-zinc-400 rounded-full"
+      )}
+    >
+      {blogpost?.dateCreated}
+    </span>
+
+{blogpost?.sourceUrl ? (
+      <a
+    href={blogpost.sourceUrl}
+      class={cn(
+        blogpost.primary
+          ? "group-hover:text-slate-800  group-hover:tracking-wide group-hover:bg-zinc-100 group-hover:shadow-md bottom-4"
+          : "bg-transparent",
+        "absolute transition-all font-semibold group-hover:flex hidden z-40 left-4  h-10 items-center justify-center px-5 py-2 text-normal text-zinc-400 rounded-full"
+      )}
+    >
+        Source
+</a>
+): null}
+<span
+class={cn(
+    blogpost.sourceUrl && "left-16  pr-5 rounded-r-full pl-12", 
+    blogpost.primary
+      ? "group-hover:text-slate-800 bottom-4  group-hover:tracking-wide group-hover:bg-white border-zinc-50 border-1 group-hover:shadow-md"
+      : "bg-white px-5 py-2 rounded-full right-4 bg-gradient-to-br from-zinc-100 to-slate-50",
+    "absolute transition-all font-semibold group-hover:flex hidden  z-20  h-10 items-center justify-start   text-normal text-zinc-400 "
+  )}
+>
+    {blogpost.topic}
+</a>
+  </article>
 </li>
-
-

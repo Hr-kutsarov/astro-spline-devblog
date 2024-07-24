@@ -1,24 +1,15 @@
-
 // components
-import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-  } from "@/components/ui/drawer"
 import { Button } from "../ui/button";
 
 // hooks
-import { cn } from "@/lib/utils";
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { useRef, useState } from "react";
 import { ReactLenis, useLenis } from 'lenis/react';
 import { triggerStore } from "@/lib/blogTriggers";
+import { cn } from "@/lib/utils";
 
+// icons
+import { RxHome } from "react-icons/rx";
 // types
 interface PositionProps {
     left: number,
@@ -48,7 +39,7 @@ export default function PillNavBarComponent() {
     }
 
     const navStyles: string = cn(
-        " flex flex-col items-start justify-start fixed top-[37vh] left-0 backdrop-blur-sm"
+        "relative flex  lg:ml-4 items-start justify-start w-full h-full gap-4"
     );
     // TSX component
 
@@ -63,10 +54,10 @@ export default function PillNavBarComponent() {
         exit={{x: 0, opacity: 0}}
         transition={{duration: 0.4}}
         className={cn(navStyles)}>
-            <LinkItem setPosition={setPosition} href='/'>Home</LinkItem>
+            <LinkItem setPosition={setPosition} href='/'>home</LinkItem>
             <LinkItem setPosition={setPosition} href='/about'>About</LinkItem>
             <LinkItem setPosition={setPosition} href='/thenourishproject'>Projects</LinkItem>
-            <TriggerEntries />
+            {/* <TriggerEntries /> */}
             {/* <LinkItem setPosition={setPosition} href={`/${path}`}>{path}</LinkItem> */}
             {/* <CursorBackground position={position} /> */}
         </motion.nav>
@@ -76,9 +67,9 @@ export default function PillNavBarComponent() {
 
 const LinkItem = ({ children, href, setPosition } : any) => {
     const ref = useRef<HTMLAnchorElement>(null);
-    const aStyles: string = 'flex z-40 h-auto w-auto bg-transparent items-center justify-center px-2 md:px-5 py-2 rounded-lg mix-blend-multiply';
-    const aTextStyles: string = 'text-zinc-800 font-bold tracking-tight uppercase text-5xl';
-    const aTextStylesHover: string = "hover:opacity-20"
+    const aStyles: string = 'px-2 py-1 rounded-lg lg:text-5xl' ;
+    const aTextStyles: string = 'text-zinc-800 font-bold tracking-tight uppercase text-2xl text-white';
+    const aTextStylesHover: string = "hover:text-zinc-600"
 
     return (
         <a ref={ref} className={cn(aStyles, aTextStyles, aTextStylesHover)} href={href}>{children}</a>
@@ -89,8 +80,8 @@ const LinkItem = ({ children, href, setPosition } : any) => {
 const TriggerEntries: React.FC = ( ) => {
 
     const triggerHandler = triggerStore();
-    const aStyles: string = 'flex z-40 h-auto w-auto bg-transparent items-center justify-center px-2 md:px-5 py-2 rounded-lg mix-blend-multiply';
-    const aTextStyles: string = 'text-zinc-800 font-bold tracking-tight uppercase text-8xl';
+    const aStyles: string = 'px-2 py-1 rounded-lg';
+    const aTextStyles: string = 'text-zinc-800 font-bold tracking-tight uppercase text-normal text-white';
     const aTextStylesHover: string = "hover:opacity-20"
 
     return (

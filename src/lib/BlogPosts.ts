@@ -49,7 +49,7 @@ const blogPosts: BlogPostProps[] = [
   },
   {
     title: "Object.groupBy",
-    subtitle: "Convenience method",
+    subtitle: "New convenience method",
     content:
       "Created a new object where each key represents each key property and its value is an array of all objects with that property.",
     dateCreated: "24/07/2024",
@@ -61,7 +61,7 @@ const blogPosts: BlogPostProps[] = [
     content:
       "Set objects now get all methods that other languages provide. Check out .intersection(), .union() and the docs.",
     dateCreated: "24/07/2024",
-    topic: "math",
+    topic: "programming",
     tertiary: true,
   },
 
