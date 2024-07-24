@@ -1,32 +1,26 @@
 ---
 import '@/styles/globals.css'
-import PillNavBarComponent from '@/components/Experimental/PillNavbarFollowCursor';
-
-import LoadingReactComponent from '@/components/BlogPage/LoadingReactComponent';
-import MainSectionWelcomeAnimation from '@/components/BlogPage/Main';
+import PillNavBarComponent from '@/components/Experimental/PillNavbarFollowCursor2';
 import LayoutBlog from '@/layouts/LayoutBlog.astro';
-import RTFExample from '@/components/BlogPage/RTF_example';
+import { blogPosts } from '@/lib/BlogPosts';
+import type { BlogPostProps } from '@/lib/BlogPosts';
+import BlogArticle from '@/components/BlogPage/BlogArticle.astro'
 
 ---
 
 <LayoutBlog title="About@DevBlog">
 
-<section id="welcome-section" class="relative flex flex-col items-center w-full h-full min-h-[100vh] bg-slate-200">
+<section id="welcome-section" class="relative flex justify-end xl:justify-center w-full h-full">
+    <!-- navigation -->
     <PillNavBarComponent client:load />
-    <!-- content wrapper -->
-    <span class="px-4 justify-center flex flex-col w-full h-auto max-h-[100vh] max-w-[960px] border-dotted min-h-[74vh] mt-14 relative">
+    <!-- content -->
+     <!-- wrapper with max-width 1200px -->
+    <ul class="gap-4 pt-5 grid grid-cols-4 w-full h-full md:max-w-[430px] lg:max-w-[960px] xl:max-w-[1200px]">
+        {blogPosts.map((data: BlogPostProps) => (
+            <BlogArticle data={data} />
+        ))}
+    </ul>
 
-        <!-- welcome animation -->
-        <!-- <h2 id="topic-welcome" class="flex w-full justify-center font-semibold text-slate-400 tracking-wider ">welcome</h2> -->
-        <!-- <MainSectionWelcomeAnimation client:load /> -->
-        <!-- <h2 class="flex w-full justify-center font-semibold text-slate-400 tracking-wide italic">from graphic design to web development</h2> -->
-        <!-- appearing animation from behind -->
-        <!-- <LoadingReactComponent client:load /> -->
-        <!-- experiment with gsap and react-three-fiber -->
-         <RTFExample client:load />
-    </span>
-    <!-- /content wrapper -->
 </section>
 </Layout>
-
 
