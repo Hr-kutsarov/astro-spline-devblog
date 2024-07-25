@@ -2,12 +2,11 @@
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import type { BlogPostProps } from "@/lib/BlogPosts";
-import { Button } from "../ui/button";
 
 const { data } = Astro.props;
 const liStyles: string = cn("bg-gradient-to-br rounded-2xl");
-
 const blogpost: BlogPostProps = data;
+import BlogPostExampleWrapper from '@/components/BlogPage/BlogpostExampleWrapper'
 ---
 
 <li
@@ -45,6 +44,9 @@ const blogpost: BlogPostProps = data;
     >
       {blogpost?.subtitle}
     </h3>
+
+      {blogpost.example ? <BlogPostExampleWrapper client:load a={blogpost.example} /> : null}
+
     <p
       class={cn(
         blogpost.primary ? "text-white" : "text-zinc-600",
@@ -89,5 +91,9 @@ class={cn(
 >
     {blogpost.topic}
 </a>
+
+
+
   </article>
+
 </li>

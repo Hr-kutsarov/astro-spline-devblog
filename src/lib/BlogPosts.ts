@@ -2,6 +2,7 @@ interface BlogPostProps {
   title: string;
   subtitle?: string;
   content: string;
+  example?: string;
   dateCreated: string;
   topic: string;
   primary?: boolean;
@@ -52,6 +53,7 @@ const blogPosts: BlogPostProps[] = [
     subtitle: "New convenience method",
     content:
       "Created a new object where each key represents each key property and its value is an array of all objects with that property.",
+    example: "<html lang='en'><head><title>My Homepage</title></head><body><h1>Welcome to my website!</h1></body></html>",
     dateCreated: "24/07/2024",
     topic: "JS",
     tertiary: true,
@@ -60,11 +62,12 @@ const blogPosts: BlogPostProps[] = [
     title: "Working with sets",
     content:
       "Set objects now get all methods that other languages provide. Check out .intersection(), .union() and the docs.",
+    example:
+      "<html lang='en'><head><title>My Homepage</title></head><body><h1>Welcome to my website!</h1></body></html>",
     dateCreated: "24/07/2024",
     topic: "programming",
     tertiary: true,
   },
-
 ];
 
 export { blogPosts };
