@@ -28,9 +28,9 @@ interface extendedSectionBlueprint extends sectionBlueprint {
 const exampleSectionData: sectionBlueprint[] = [
     {
         // general idea
-        liItem1: 'One app, four different tech stacks.',
-        liItem2: 'From zero coding skills to deployment.',
-        liItem3: '',
+        liItem1: 'Tech news',
+        liItem2: 'Sample code',
+        liItem3: 'Discussing ideas',
         liItem4: '',
         btnPrimaryText: 'More',
         btnSecondaryText: 'More',
@@ -61,7 +61,7 @@ const aboutSectionData: sectionBlueprint[] = [
     {
 
         liItem1: 'Graphic designer with two years of professional experience in printing and package design.',
-        liItem2: 'Self-taught web developer with two years of experience working on personal and university projects.',
+        liItem2: 'Freelance web developer experienced in TS stack tech.',
         liItem3: '',
         liItem4: '',
         btnPrimaryText: 'Front-end',

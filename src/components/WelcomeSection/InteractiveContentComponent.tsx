@@ -30,7 +30,7 @@ export default function InteractiveContentAndButtonsJSXComponent() {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.4, delay: 0 }}
                       >
-                        <span className=" group relative bg-clip-text text-lg text-transparent bg-gradient-to-b from-zinc-100 via-slate-200 to-slate-200">
+                        <span className=" group relative bg-clip-text text-lg md:text-2xl text-transparent bg-gradient-to-b from-zinc-100 via-slate-200 to-slate-200">
                           <span className="absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40">
                             <RxChevronRight size={22} />
                           </span>
@@ -45,7 +45,7 @@ export default function InteractiveContentAndButtonsJSXComponent() {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.4, delay: 0.2 }}
                       >
-                        <span className=" group relative bg-clip-text text-lg text-transparent bg-gradient-to-b from-zinc-100 via-slate-200 to-slate-200">
+                        <span className=" group relative bg-clip-text text-lg md:text-2xl text-transparent bg-gradient-to-b from-zinc-100 via-slate-200 to-slate-200">
                           <span className="absolute hidden group-hover:flex text-cyan-400 top-1 -left-8 z-40">
                             <RxChevronRight size={22} />
                           </span>

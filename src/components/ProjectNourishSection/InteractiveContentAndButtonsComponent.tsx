@@ -22,7 +22,7 @@ export default function InteractiveProjectNourishJSXComponent() {
     return (
         <>
         <AnimatePresence mode="wait">
-        <div className='bg-transparent flex w-auto h-auto min-w-[330px] mt-4'>
+        <div className='bg-transparent flex w-auto h-auto min-w-[330px]'>
             
             {storeHandler.stage === 0 ? [storeHandler.items[0]].map((el, idx) => 
                 <span key={`${idx} - span-welcome`} className={cn(x)}>

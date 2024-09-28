@@ -28,7 +28,7 @@ const LogoIcon: React.FC<LogoIconAttributes> = ({
           y2="32"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#22C55E" />
+          <stop stopColor="#22C55E" />
           <stop offset="1" stop-color="#047857" />
         </linearGradient>
       </defs>
