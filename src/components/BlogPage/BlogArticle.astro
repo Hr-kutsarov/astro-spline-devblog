@@ -45,7 +45,7 @@ import BlogPostExampleWrapper from '@/components/BlogPage/BlogpostExampleWrapper
       {blogpost?.subtitle}
     </h3>
 
-      {blogpost.example ? <BlogPostExampleWrapper client:load a={blogpost.example} /> : null}
+      <!-- {blogpost.example ? <BlogPostExampleWrapper client:load a={blogpost.example} /> : null} -->
 
     <p
       class={cn(
@@ -91,8 +91,6 @@ class={cn(
 >
     {blogpost.topic}
 </a>
-
-
 
   </article>
 
