@@ -1,7 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-
 import { welcomeSectionDataStore } from "@/lib/appStateStore";
-
 import { cn } from "@/lib/utils";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -9,16 +7,14 @@ export default function InteractiveContentAndButtonsJSXComponent() {
   const storeHandler = welcomeSectionDataStore();
 
   const x = "flex flex-col items-start";
-
-  const h2Styles: string = 'flex text-lg md:text-2xl tracking-wider text-slate-400 uppercase max-w-[320px] mb-2 md:mb-4';
-  const liStyles: string =  'group relative bg-clip-text text-transparent bg-gradient-to-b from-slate-400 via-slate-500 to-slate-500';
+  const liStyles: string =  'group mb-2 relative bg-clip-text text-transparent bg-gradient-to-b from-slate-400 via-slate-500 to-slate-500';
   const ulStyles: string = 'max-w-[320px] md:max-w-[430px] lg:max-w-[530px] mb-8 flex flex-col items-start justify-center gap-1';
   const liWrapperStyles: string = 'bg-clip-text text-lg md:text-2xl font-bold';
 
   return (
     <>
       <AnimatePresence mode="wait">
-        <div className="py-4 px-2">
+        <div className="px-2">
           {storeHandler.stage === 0
             ? [storeHandler.items[0]].map((el, idx) => (
                 <span key={`${idx} - span-welcome`} className={cn(x)}>

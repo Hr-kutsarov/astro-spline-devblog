@@ -1,7 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion"
-
-import { aboutSectionDataStore, projectNourishStore, welcomeSectionDataStore } from "@/lib/appStateStore"
-
+import { projectNourishStore } from "@/lib/appStateStore"
 import { cn } from "@/lib/utils";
 import { RxChevronRight } from "react-icons/rx";
 
@@ -22,7 +20,7 @@ export default function InteractiveProjectNourishJSXComponent() {
     return (
         <>
         <AnimatePresence mode="wait">
-        <div className='bg-transparent flex w-auto h-auto min-w-[330px]'>
+        <div className='bg-transparent -mt-6 flex w-auto h-auto min-w-[330px]'>
             
             {storeHandler.stage === 0 ? [storeHandler.items[0]].map((el, idx) => 
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
@@ -182,7 +180,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                     </ul>
                 </span>
             ) : null}
-            {storeHandler.stage === 2 ? [storeHandler.items[2]].map((el, idx) => 
+            {/* {storeHandler.stage === 2 ? [storeHandler.items[2]].map((el, idx) => 
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
                     <motion.h2 
                     initial={{opacity: 0}}
@@ -260,7 +258,7 @@ export default function InteractiveProjectNourishJSXComponent() {
                         </motion.li> : null}
                     </ul>
                 </span>
-            ) : null}
+            ) : null} */}
         
         </div>
         </AnimatePresence>

@@ -18,8 +18,7 @@ export default function InteractiveAboutJSXComponent() {
     return (
         <>
         <AnimatePresence mode="wait">
-        <div className='py-4 flex w-auto h-auto min-w-[330px] '>
-            
+        <div className='flex -mt-6 w-auto h-auto min-w-[330px] '>
             {storeHandler.stage === 0 ? [storeHandler.items[0]].map((el, idx) => 
                 <span key={`${idx} - span-welcome`} className={cn(x)}>
                     <motion.h2 
