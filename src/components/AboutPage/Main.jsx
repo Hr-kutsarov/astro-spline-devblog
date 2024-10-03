@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { ReactLenis, useLenis } from "lenis/react";
 import { cn } from "@/lib/utils";
 import DonutChartUsageExampleWithClickEvent from "@/components/AboutPage/ChartsComponent";
@@ -8,7 +8,6 @@ import {
   motion,
   AnimatePresence,
 } from "framer-motion";
-import { RxAccessibility, RxAngle } from "react-icons/rx";
 import PillNavBarComponent from "@/components/Experimental/PillNavbarFollowCursor";
 
 export default function AboutMainComponent() {
