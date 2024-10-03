@@ -13,8 +13,8 @@ export default function ButtonStageSetAboutSection() {
     return (
         <>
         {storeHandler.stage === 0 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(1)}><RxChevronRight size={20} /></Button> : null}
-        {storeHandler.stage === 1 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(2)}><RxChevronRight size={20} /></Button> : null}
-        {storeHandler.stage === 2 ? <Button className={cn(btnStyles, 'text-cyan-900')} onClick={() => storeHandler.setStage(0)}><RxChevronLeft size={20} /></Button> : null}
+        {storeHandler.stage === 1 ? <Button className={cn(btnStyles)} onClick={() => storeHandler.setStage(0)}><RxChevronRight size={20} /></Button> : null}
+        {/* {storeHandler.stage === 2 ? <Button className={cn(btnStyles, 'text-cyan-900')} onClick={() => storeHandler.setStage(0)}><RxChevronLeft size={20} /></Button> : null} */}
         </>
     )
 }
