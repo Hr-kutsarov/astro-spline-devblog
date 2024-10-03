@@ -1,19 +1,10 @@
 import { create } from 'zustand'
 
 interface sectionBlueprint {
-    // yes I know! this is stupid but there's a reason for that. 
-    // example
-    // layout.data.map((el, idx)=> (<>
-    // <section>
-    // <ul>
-    // {el.map((e, i) => (<li>{e.param}</li> IS A NONONONONOONO)})}
-    // </ul>
-    // </section>)) 
     liItem1: string,    
     liItem2: string,
     liItem3: string,
     liItem4: string,
-    // 
     btnPrimaryText: string,
     btnSecondaryText: string,
     subtitleText: string
@@ -27,7 +18,6 @@ interface extendedSectionBlueprint extends sectionBlueprint {
 }
 const exampleSectionData: sectionBlueprint[] = [
     {
-        // general idea
         liItem1: 'Tech news',
         liItem2: 'Sample code',
         liItem3: 'Discussing ideas',
@@ -60,13 +50,13 @@ const aboutSectionData: sectionBlueprint[] = [
 
     {
 
-        liItem1: 'Graphic designer with two years of professional experience in printing and package design.',
-        liItem2: 'Freelance web developer experienced in TS stack tech.',
-        liItem3: '',
-        liItem4: '',
+        liItem1: 'Showcasing projects',
+        liItem2: 'Software development architecture',
+        liItem3: 'Web development insights',
+        liItem4: 'Experimenting with new tech',
         btnPrimaryText: 'Front-end',
         btnSecondaryText: 'Return',
-        subtitleText: 'the author'
+        subtitleText: ''
     },
     {
 
@@ -95,47 +85,46 @@ const projectNourishSectionData: extendedSectionBlueprint[] = [
 
     {
 
-        liItem1: 'Contains food data which can be accessed quickly on any device.',
-        liItem2: 'Learn more about nutrition and food pairing.',
-        liItem3: 'Gain access to compact and concise amount of knowledge in your pocket.',
-        liItem4: 'Become a better athlete, a better homecook, a better chef by tracking your goals and progress.',
+        liItem1: 'Calculate your daily macros',
+        liItem2: 'Sum up daily intake of micronutrients and minerals.',
+        liItem3: 'Learn more about nutrition and food pairing.',
+        liItem4: 'Track your diet plan goals.',
         pItem1: '',
         pItem2: '',
         pItem3: '',
         pItem4: '',
         btnPrimaryText: '',
         btnSecondaryText: 'More',
-        subtitleText: 'what does it do?'
+        subtitleText: 'Purpose'
     },
     {
 
-        liItem1: 'Primary view:',
-        liItem2: 'Track nutrition:',
-        liItem3: 'Taste and flavor:',
+        liItem1: 'Public view:',
+        liItem2: 'Registered users only:',
+        liItem3: 'Extras:',
         liItem4: '',
-        pItem1: 'Discover properties from the culinary world. Learn about flavor affinities, seasonality and flavor nuances.',
-        pItem2: 'Input your meal plan, review the charts, track your progress.',
-        pItem3: 'Store your food recipes. Learn about flavor weight and volume.',
+        pItem1: 'Forever free way of tracking your nutrition.',
+        pItem2: 'Save your meal plan and recipes.',
+        pItem3: 'Multiply your recipe, add cooking steps, visualize your progress.',
         pItem4: '',
         btnPrimaryText: 'Next',
         btnSecondaryText: 'Tech info',
-        subtitleText: '*swiss army knife*'
+        subtitleText: 'Usage'
     },
-    {
-        // general idea
+    // {
 
-        liItem1: 'Front-end:',
-        liItem2: 'Back-end: ',
-        liItem3: 'Database: ',
-        liItem4: 'Libs:',
-        pItem1: 'NextJS 14',
-        pItem2: 'Spring Boot',
-        pItem3: 'Postgres',
-        pItem4: 'Zustand, Tremor, Framer Motion',
-        btnPrimaryText: 'PrimaryReturn',
-        btnSecondaryText: 'Return',
-        subtitleText: 'Tech stack'
-    },
+    //     liItem1: 'Front-end:',
+    //     liItem2: 'Back-end: ',
+    //     liItem3: 'Database: ',
+    //     liItem4: 'Libs:',
+    //     pItem1: 'NextJS 14',
+    //     pItem2: 'Spring Boot',
+    //     pItem3: 'Postgres',
+    //     pItem4: 'Zustand, Tremor, Framer Motion',
+    //     btnPrimaryText: 'PrimaryReturn',
+    //     btnSecondaryText: 'Return',
+    //     subtitleText: 'Technology'
+    // },
 ]
 
 const BlogDataWelcomeComponent: extendedSectionBlueprint[] = [

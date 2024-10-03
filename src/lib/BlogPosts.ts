@@ -65,7 +65,7 @@ const blogPosts: BlogPostProps[] = [
     example:
       "<html lang='en'><head><title>My Homepage</title></head><body><h1>Welcome to my website!</h1></body></html>",
     dateCreated: "24/07/2024",
-    topic: "programming",
+    topic: "JS",
     tertiary: true,
   },
 ];
