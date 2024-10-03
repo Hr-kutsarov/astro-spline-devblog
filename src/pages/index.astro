@@ -15,7 +15,7 @@ import ButtonStageSetNourishSection from "@/components/ProjectNourishSection/But
 import AltButtonStageSetAboutSection from "@/components/ProjectNourishSection/ButtonStageSetComponentAlt";
 import AnimatedArrowDownComponent from "@/components/Experimental/AnimatedArrowDown";
 
-const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-2";
+const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-8";
 ---
 
 <Layout title="DevBlog @Kutsarov">
@@ -24,7 +24,7 @@ const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-2";
     class="relative flex flex-col items-center min-h-[1200px] lg:min-h-[100vh] bg-gradient-to-b from-slate-200 via-slate-100 to-white"
   >
     <AltButtonStageSetAboutSection client:load />
-    <span class="grid grid-cols-1 md:grid-cols-2 h-full w-full max-w-[1230px]">
+    <span class="grid grid-cols-1 md:grid-cols-2 h-full w-full pt-[6vh] max-w-[1230px]">
       <span
         class={cn(
           "w-full flex flex-col items-start justify-center px-8 md:px-20 "
@@ -32,7 +32,7 @@ const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-2";
       >
         <h1 class={cn(h1Styles, "text-slate-50")}>
           <span
-            class="bg-clip-text text-transparent bg-gradient-to-b from-slate-500 via-slate-600 to-slate-800"
+            class="bg-clip-text text-transparent bg-gradient-to-br from-slate-500 via-emerald-600 to-slate-800"
           >
             Nourish
           </span>
@@ -70,7 +70,7 @@ const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-2";
           <span
             class="bg-clip-text text-transparent h-[120%] px-2 bg-gradient-to-b from-cyan-50 via-cyan-100 to-slate-400"
           >
-            Visit the Devlog
+            Visit the Devblog
           </span>
         </h1>
         <InteractiveContentAndButtonsJSXComponent client:load />
@@ -117,7 +117,7 @@ const h1Styles: string = "text-6xl w-auto flex max-w-[290px] mb-2";
           </span>
         </h1>
         <InteractiveAboutJSXComponent client:visible />
-        <span class="flex items-center gap-2">
+        <span class="flex items-center gap-2 mt-2">
           <ButtonStageSetAboutSection client:visible />
           <a
             class="w-full bg-slate-700 hover:bg-slate-800 text-zinc-50 px-5 py-3 max-h-14 text-sm tracking-wider font-semibold rounded-lg flex items-center justify-center"

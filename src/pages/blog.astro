@@ -10,17 +10,17 @@ import BlogArticle from '@/components/BlogPage/BlogArticle.astro'
 
 <LayoutBlog title="About@DevBlog">
 
-<section id="welcome-section" class="relative flex flex-col justify-center items-center bg-slate-200 px-4">
+<section id="welcome-section" class="relative flex flex-col justify-center items-center pt-14 bg-slate-200 px-4">
     <!-- navigation -->
-    <span class="fixed top-0 z-50 flex w-auto h-auto py-2  backdrop-blur-md rounded-b-lg px-4">
+    <span class="fixed top-0 z-50 flex w-full h-auto py-2 justify-center backdrop-blur-md rounded-b-lg px-4">
         <PillNavBarComponent client:load />
     </span>
 
     <!-- content -->
      <!-- wrapper with max-width 1200px -->
-    <ul class="gap-4 pt-5 grid grid-cols-6 w-full z-0 h-full md:max-w-[660px] mt-6 lg:mt-14 mb-12 lg:max-w-[960px] xl:max-w-[1200px]">
-        {blogPosts.map((data: BlogPostProps) => (
-            <BlogArticle data={data} />
+    <ul class="gap-4 pt-5 grid grid-cols-6 w-full z-0 h-full md:max-w-[660px] mb-12 lg:max-w-[960px] xl:max-w-[1200px]">
+        {blogPosts.map((data: BlogPostProps, idx: number) => (
+            <BlogArticle key={idx} data={data} />
         ))}
     </ul>
 
