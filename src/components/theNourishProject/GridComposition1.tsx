@@ -329,7 +329,7 @@ const GridComposition = () => {
               "text-normal text-zinc-300/90 mb-5 font-semibold tracking-wide max-w-[320px]"
             )}
           >
-            Blazingly fast and simple to use.
+            Simple state management with Zustand.
           </p>
 
           <p
@@ -345,7 +345,7 @@ const GridComposition = () => {
               "text-normal text-zinc-300/90 mb-14 font-semibold tracking-wide max-w-[320px]"
             )}
           >
-            Extensive data from multiple verified sources.
+            Motion elements by Framer.
           </p>
         </span>
         <motion.div
