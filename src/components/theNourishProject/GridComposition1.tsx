@@ -73,6 +73,9 @@ const GridComposition = () => {
             className={cn(liTextStyles)}
           >
             Sum up nutrition values
+            <span className="absolute text-green-400 top-1 -left-6 z-40">
+              <RxChevronRight size={22} />
+            </span>
           </motion.li>
           <motion.li
             whileInView={{ opacity: 1, x: 0 }}
