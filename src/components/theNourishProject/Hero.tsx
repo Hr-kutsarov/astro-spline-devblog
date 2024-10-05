@@ -10,7 +10,7 @@ const HeroSection = () => {
 
     return (
         <section className={cn(sectionShape, sectionColors)}>
-            <div id="hero__text" className=" flex flex-col justify-center px-24 md:px-0">
+            <div id="hero__text" className=" flex flex-col justify-center px-14 md:px-0">
                 <span className='flex gap-2  items-center'>
                 <LogoIcon />
                 <h1 className={cn('text-emerald-50 text-2xl')}>
