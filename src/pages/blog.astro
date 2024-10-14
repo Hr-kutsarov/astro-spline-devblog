@@ -5,25 +5,29 @@ import LayoutBlog from '@/layouts/LayoutBlog.astro';
 import { blogPosts } from '@/lib/BlogPosts';
 import type { BlogPostProps } from '@/lib/BlogPosts';
 import BlogArticle from '@/components/BlogPage/BlogArticle.astro'
+import { LayoutingGuidelines, LayoutingGuidelinesDark } from '@/components/AboutPage/Main';
 
 ---
 
 <LayoutBlog title="About@DevBlog">
 
-<section id="welcome-section" class="relative flex flex-col justify-center items-center pt-14 bg-slate-200 px-4">
+<section id="welcome-section" class="relative flex flex-col justify-center items-center pt-14 bg-slate-200">
     <!-- navigation -->
     <span class="fixed top-0 z-50 flex w-full h-auto py-2 justify-center backdrop-blur-md rounded-b-lg px-4">
         <PillNavBarComponent client:load />
     </span>
 
+    
+
     <!-- content -->
      <!-- wrapper with max-width 1200px -->
-    <ul class="gap-4 pt-5 grid grid-cols-6 w-full z-0 h-full md:max-w-[660px] mb-12 lg:max-w-[960px] xl:max-w-[1200px]">
+    <ul class="gap-4 py-12 grid grid-cols-6 w-full z-0 h-full md:max-w-[660px] mb-12 lg:max-w-[960px] xl:max-w-[1200px]">
         {blogPosts.map((data: BlogPostProps, idx: number) => (
             <BlogArticle key={idx} data={data} />
         ))}
     </ul>
-
+    <LayoutingGuidelines />
+    <LayoutingGuidelinesDark />
 </section>
 </Layout>
 
