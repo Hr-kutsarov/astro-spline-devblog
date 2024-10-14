@@ -9,7 +9,10 @@ import NourishMobileViewImage from "../../images/nourish-mobile-view.png";
 import NourishMobileViewImage2 from "../../images/nourish-mobile-view2.png";
 import NourishMobileViewImage3 from "../../images/nourish-mobile-view3.png";
 import NourishMobileViewImage4 from "../../images/nourish-mobile-view4.png";
-import { RxChevronRight } from "react-icons/rx";
+import NourishOldView from '../../images/nourish-old.png';
+import NourishNewView from '../../images/nourish-new.png';
+import NourishBgTranslation from '../../images/nourish-bg.png';
+import { RxChevronRight, RxChevronUp } from "react-icons/rx";
 
 const GridComposition = () => {
   const [x, setX] = useState<any>(0);
@@ -42,7 +45,9 @@ const GridComposition = () => {
       root
     >
       {/* preview */}
-      <section className="pb-24 flex flex-col lg:flex-row justify-evenly items-center px-14 lg:px-40 w-full min-h-screen bg-gradient-to-b from-emerald-900 via-emerald-700 to-slate-800">
+      <section 
+      id="start_section"
+      className="pb-24 flex flex-col lg:flex-row justify-evenly items-center px-14 lg:px-40 w-full min-h-screen bg-gradient-to-b from-emerald-900 via-emerald-700 to-slate-800">
         <ul className="mb-24">
           <motion.li
             whileInView={{ opacity: 1, x: 0 }}
@@ -360,10 +365,142 @@ const GridComposition = () => {
             height="500"
             loading="lazy"
             decoding="async"
+            alt=""
+          />
+        </motion.div>
+      </section>
+
+
+      <section className="py-24 flex flex-col lg:flex-row justify-evenly items-center px-14 lg:px-40 w-full min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* left section */}
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.3, repeat: 0 }}
+          className="flex h-auto w-auto bg-zinc-800 p-4 rounded-2xl"
+        >
+          <img
+            src={NourishOldView.src}
+            width="300"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            alt=""
+          />
+        </motion.div>
+        <span>
+          
+          <span className={cn("flex overflow-hidden mb-14")}>
+            <motion.h2
+              className="mt-8 text-4xl bg-gradient-to-br from-green-300 via-green-500 to-emerald-300 inline-block text-transparent bg-clip-text font-semibold "
+              initial={{ y: 120 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.3 }}
+            >
+              New interface
+            </motion.h2>
+          </span>
+
+          <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-5 font-semibold tracking-wide max-w-[320px]"
+            )}
+          >
+            Improved visual hierarchy.
+          </p>
+
+          <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-5 font-semibold tracking-wide max-w-[320px]"
+            )}
+          >
+            Reduced complexity.
+          </p>
+
+          <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-5 font-semibold tracking-wide max-w-[320px]"
+            )}
+          >
+            Toned down color and component diversity.
+          </p>
+
+          <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-5 font-semibold tracking-wide max-w-[320px]"
+            )}
+          >
+            Reduced user actions.
+          </p>
+
+          <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-14 font-semibold tracking-wide max-w-[320px]"
+            )}
+          >
+            More intuitive.
+          </p>
+        </span>
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.3, repeat: 0 }}
+          className="flex h-auto w-auto bg-zinc-800 p-4 rounded-2xl"
+        >
+          <img
+            src={NourishNewView.src}
+            width="300"
+            height="500"
+            loading="lazy"
+            decoding="async"
             alt="A very cool penguin!"
           />
         </motion.div>
       </section>
+
+      <section className="py-24 flex flex-col lg:flex-row justify-evenly items-center px-14 lg:px-40 w-full min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+
+        <span>
+        
+          <span className={cn("flex overflow-hidden mb-14")}>
+            <motion.h2
+              className="mt-8 text-4xl bg-gradient-to-br from-green-300 via-green-500 to-emerald-300 inline-block text-transparent bg-clip-text font-semibold "
+              initial={{ y: 120 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.3 }}
+            >
+              Now bilingual
+            </motion.h2>
+          </span>
+
+        </span>
+        <motion.div
+          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.3, repeat: 0 }}
+          className="flex h-auto w-auto bg-zinc-800 p-4 rounded-2xl"
+        >
+          <img
+            src={NourishBgTranslation.src}
+            width="300"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            alt="bg-translated-image"
+          />
+        </motion.div>
+
+        <p
+            className={cn(
+              "text-normal text-zinc-300/90 mb-14 font-semibold tracking-wide max-w-[320px] mt-12"
+            )}
+          >
+           Available in Bulgarian.
+          </p>
+      </section>
+      <footer className='h-40 flex w-full bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 items-center justify-center'>
+        <a href="#page__top" className='text-zinc-50/75 tracking-wide flex items-center gap-2 text-sm font-semibold'> <RxChevronUp size={16} />Back to top</a>
+      </footer>
     </ReactLenis>
   );
 };
