@@ -85,7 +85,7 @@ export default function DonutChartUsageExampleWithClickEvent() {
           className={cn(
             "h-[120px] md:h-[150px] w-[120px] md:w-[150px] text-zinc-50 font-semibold "
           )}
-        //   valueFormatter={xDataFormatter}
+          // valueFormatter={xDataFormatter}
           data={development}
           index="name"
           category="value"
